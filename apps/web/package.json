@@ -1,0 +1,44 @@
+{
+  "name": "@stack/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-routes": "tsr generate",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@tanstack/react-devtools": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/react-router-devtools": "catalog:",
+    "axios": "catalog:",
+    "class-variance-authority": "catalog:",
+    "clsx": "catalog:",
+    "cn": "catalog:",
+    "lucide-react": "catalog:",
+    "radix-ui": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwind-merge": "catalog:",
+    "tailwindcss": "catalog:",
+    "tw-animate-css": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@tanstack/devtools-vite": "catalog:",
+    "@tanstack/router-cli": "catalog:",
+    "@tanstack/router-plugin": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "stack-template",
+  "private": true,
+  "packageManager": "pnpm@10.1.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check": "biome check .",
+    "format": "biome format --write .",
+    "lint": "biome lint --write .",
+    "typecheck": "pnpm -r run typecheck",
+    "dev:api": "pnpm --filter @stack/api dev",
+    "dev:web": "pnpm --filter @stack/web dev",
+    "prepare": "lefthook install"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.15",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
+    "lefthook": "^1.13.0"
+  }
+}
