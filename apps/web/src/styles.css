@@ -129,3 +129,16 @@ body,
     color: var(--foreground);
   }
 }
+
+/* 单元格编辑器滚动条：仿 scroll-area 的细滚动条——导轨（轨道）永远透明，
+   滑块平时透明、仅在滚动中显示（data-scrolling 由 cell-editor.tsx 维护）。
+   scrollbar-gutter: stable 让滑块显示/隐藏不引起内容回缩 */
+.cell-editor-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+  scrollbar-color: transparent transparent;
+}
+
+.cell-editor-scrollbar[data-scrolling] {
+  scrollbar-color: var(--border) transparent;
+}

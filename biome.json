@@ -44,6 +44,16 @@
           }
         }
       }
+    },
+    {
+      "includes": ["apps/web/src/features/views/table/**"],
+      "linter": {
+        "rules": {
+          "a11y": {
+            "noNoninteractiveElementToInteractiveRole": "off"
+          }
+        }
+      }
     }
   ]
 }
