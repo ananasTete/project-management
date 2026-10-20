@@ -3,6 +3,7 @@ import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { env } from "../env";
 import { auth, type Session } from "./auth";
+import { tablesRoutes } from "./routes/tables";
 
 const app = new Hono<{ Variables: { session: Session } }>();
 
@@ -27,6 +28,9 @@ app.get("/api/me", (c) => {
   const { user } = c.get("session");
   return c.json({ id: user.id, email: user.email, name: user.name });
 });
+
+// 自定义表格 CRUD（data_table 三表体系，见 src/routes/tables.ts）
+app.route("/api/tables", tablesRoutes);
 
 app.get("/health", (c) => c.json({ ok: true }));
 
