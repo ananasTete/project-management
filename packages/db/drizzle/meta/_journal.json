@@ -8,6 +8,20 @@
       "when": 1792143444529,
       "tag": "0000_great_micromax",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1792396399203,
+      "tag": "0001_robust_fat_cobra",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792461398413,
+      "tag": "0002_unique_doctor_faustus",
+      "breakpoints": true
     }
   ]
 }

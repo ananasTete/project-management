@@ -17,9 +17,12 @@ if (url) {
   const { PGlite } = await import("@electric-sql/pglite");
   const { drizzle } = await import("drizzle-orm/pglite");
   const { migrate } = await import("drizzle-orm/pglite/migrator");
-  mkdirSync(".data/pg", { recursive: true });
-  const db = drizzle(await PGlite.create(".data/pg"));
+  // 必须锚定到包内目录，与 src/index.ts 的 createDb 是同一个库；
+  // 用相对 cwd 的 ".data/pg" 会在根目录下另建一个空库
+  const dataDir = new URL("../.data/pg", import.meta.url).pathname;
+  mkdirSync(dataDir, { recursive: true });
+  const db = drizzle(await PGlite.create(dataDir));
   await migrate(db, { migrationsFolder });
-  console.log("migrated (local pglite: .data/pg)");
+  console.log(`migrated (local pglite: ${dataDir})`);
 }
 process.exit(0);

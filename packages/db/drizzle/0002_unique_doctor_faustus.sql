@@ -1,0 +1,2 @@
+CREATE TYPE "public"."data_table_row_height" AS ENUM('low', 'medium', 'high', 'max');--> statement-breakpoint
+ALTER TABLE "data_table" ADD COLUMN "row_height" "data_table_row_height" DEFAULT 'low' NOT NULL;
